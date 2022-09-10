@@ -27,4 +27,10 @@ The main driver for our code. This will handle user input and updating the graph
 '''
 
 def main():
+  screen = p.display.set_mode((WIDTH, HEIGHT))
+  clock = p.time.Clock()
+  screen.fill(p.Color("white"))
+  gs = ChessEngine.GameState()
+  print(gs.board)
   
+main()
