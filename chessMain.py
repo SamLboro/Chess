@@ -65,8 +65,11 @@ def main():
                     if move in validMoves:
                         gs.makeMove(move)
                         moveMade = True
-                    sqSelected = () #Reset the user clicks
-                    playerClicks = [] #Reset the history
+                        sqSelected = () #Reset the user clicks
+                        playerClicks = []
+                    else:
+                        playerClicks = [sqSelected]
+
             #Key handlers
             elif e.type == p.KEYDOWN:
                 if e.key == p.K_z: #undo when z is pressed
@@ -114,4 +117,3 @@ def drawPieces(screen, board):
 
 if __name__ == "__main__":
     main()
-
